@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['10.242.193.102', 'localhost', '127.0.0.1']
 INSTALLED_APPS = [
     'rest_framework',
     'polls.apps.PollsConfig',
+    'example',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,11 +75,11 @@ WSGI_APPLICATION = 'pollingsite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+#'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'georgeDatabase',
+        'NAME': 'temp',
         'USER': 'postgres',
         'PASSWORD': 'admin',
         'HOST': '127.0.0.1',
@@ -93,8 +94,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 '''
+
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,

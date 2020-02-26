@@ -57,5 +57,6 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('polls/',include('polls.urls')),
+    path('example/',include('example.urls')),
     path('admin/', admin.site.urls),
 ]

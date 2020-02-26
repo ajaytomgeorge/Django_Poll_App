@@ -1,7 +1,22 @@
+ <html >
+<body>
+
+<div class="header">
+  <p class="sansserif">Maniac Voter</p>
+
+</div>
+
+<div class="content">
+  <h1>Available Questions</h1>
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
 {% if latest_question_list %}
+
     <ul>
     {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        <li><a href="{% url 'polls:detail' question.id %}">  <p class="sansserif">{{ question.question_text }}</p></a></li>
     {% endfor %}
     </ul>
 {% else %}
@@ -9,6 +24,12 @@
 {% endif %}
 
 
+
+</div>
+
+</body>
+
+ </html >
 
 
 <!-- hardcoording url paths -->
